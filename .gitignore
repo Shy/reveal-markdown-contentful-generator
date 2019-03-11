@@ -15,6 +15,13 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+venu/
 
 # Serverless directories
 .serverless
+
+# Dependency directories
+node_modules/
+
+# virtualENV directories
+venu/
