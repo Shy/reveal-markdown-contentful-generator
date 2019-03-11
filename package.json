@@ -1,0 +1,22 @@
+{
+  "name": "revealjs-contentful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shy/reveal-markdown-contentful-generator.git"
+  },
+  "author": "Shy Ruparel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shy/reveal-markdown-contentful-generator/issues"
+  },
+  "homepage": "https://github.com/Shy/reveal-markdown-contentful-generator#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^4.3.0"
+  }
+}
