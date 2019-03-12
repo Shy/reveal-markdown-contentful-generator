@@ -11,9 +11,23 @@ def main(event, context):
     slides = entry.slides
     markdown = ""
     for slide in slides:
-        markdown += "".join(["#", slide.title, "\n"])
-        markdown += "".join(["##", slide.subtitle, "\n"])
-        markdown += "".join([slide.body, "\n\n\n"])
+        if markdown != "":
+            markdown += "\n\n\n"
+
+        try:
+            markdown += "".join(["# ", slide.title, "\n"])
+        except AttributeError:
+            print("Empty Title")
+
+        try:
+            markdown += "".join(["## ", slide.subtitle, "\n"])
+        except AttributeError:
+            print("Empty Subtitle")
+
+        try:
+            markdown += "".join([slide.body, "\n"])
+        except AttributeError:
+            print("Empty Body")
 
     response = {
         "statusCode": 200,
@@ -23,10 +37,8 @@ def main(event, context):
         },
         "body": markdown,
     }
-
     return response
 
 
 if __name__ == "__main__":
-
     main("", "")
